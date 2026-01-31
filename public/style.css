@@ -1,0 +1,12 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+.card { border: 1px solid #ddd; padding: 12px; margin: 12px 0; border-radius: 8px; }
+label { display: block; margin: 8px 0; }
+input, select, textarea { width: 100%; padding: 8px; box-sizing: border-box; }
+textarea { height: 90px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 8px; vertical-align: top; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+.row > * { flex: 1; min-width: 180px; }
+button { padding: 8px 12px; cursor: pointer; }
+pre { background: #f7f7f7; padding: 10px; overflow: auto; }
+.small { font-size: 12px; opacity: 0.8; }

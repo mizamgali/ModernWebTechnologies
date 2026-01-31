@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Document Intake</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Document Intake Web Application</h1>
+
+  <section class="card">
+    <h2>Create Document</h2>
+    <form id="createForm">
+      <label>Client Reference:
+        <input id="clientReference" required />
+      </label>
+
+      <label>Document Type:
+        <select id="documentType" required>
+          <option value="AGREEMENT">AGREEMENT</option>
+          <option value="ID">ID</option>
+          <option value="PROOF_OF_ADDRESS">PROOF_OF_ADDRESS</option>
+          <option value="FINANCIAL_STATEMENT">FINANCIAL_STATEMENT</option>
+        </select>
+      </label>
+
+      <label>File Name:
+        <input id="fileName" required />
+      </label>
+
+      <label>Content:
+        <textarea id="content" required></textarea>
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Filters</h2>
+    <div class="row">
+      <input id="filterClient" placeholder="clientReference" />
+      <select id="filterType">
+        <option value="">Any Type</option>
+        <option value="AGREEMENT">AGREEMENT</option>
+        <option value="ID">ID</option>
+        <option value="PROOF_OF_ADDRESS">PROOF_OF_ADDRESS</option>
+        <option value="FINANCIAL_STATEMENT">FINANCIAL_STATEMENT</option>
+      </select>
+
+      <select id="filterStatus">
+        <option value="">Any Status</option>
+        <option value="RECEIVED">RECEIVED</option>
+        <option value="VALIDATED">VALIDATED</option>
+        <option value="QUEUED">QUEUED</option>
+        <option value="PROCESSED">PROCESSED</option>
+        <option value="REJECTED">REJECTED</option>
+      </select>
+
+      <input id="filterQ" placeholder="search (q)" />
+      <button id="applyFilters">Apply</button>
+      <button id="clearFilters">Clear</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Documents</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Client Ref</th>
+          <th>Type</th>
+          <th>Status</th>
+          <th>Created</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="docRows"></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Daily Export</h2>
+    <button id="exportBtn">Generate Daily Export</button>
+    <pre id="exportResult"></pre>
+  </section>
+
+  <section class="card">
+    <h2>Output</h2>
+    <pre id="output"></pre>
+  </section>
+
+  <script src="/script.js"></script>
+</body>
+</html>
